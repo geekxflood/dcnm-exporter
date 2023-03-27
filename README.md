@@ -1,2 +1,5 @@
-# dcnm-exporter
-Golang DCNM Prometheus exporter
+# DCNM Prometheus Exporter
+
+DCNM Prometheus exporter
+
+## Description

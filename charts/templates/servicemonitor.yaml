@@ -1,0 +1,15 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: dcnm-exporter
+spec:
+  endpoints:
+  - honorLabels: true
+    port: http
+  jobLabel: dcnm-exporter
+  namespaceSelector:
+    matchNames:
+      - {{ template "dcnm-exporter.namespace" . }}
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: dcnm-exporter

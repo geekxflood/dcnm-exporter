@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  workspaceone-exporter:
+    build:
+      tags:
+        - dcnm-exporter:latest
+      context: .
+    container_name: dcnm-exporter
+    ports:
+      - 9740:9740
